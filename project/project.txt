@@ -1,0 +1,4 @@
+ANALISIS DE RIESGO-LIMITE PARA PRESTAMOS BANCARIOS
+Se realizara un modelo para clasificar cuanto se le puede prestar a un usuario identificando el riesgo que esto conlleva
+
+https://www.kaggle.com/altruistdelhite04/loan-prediction-problem-dataset

@@ -1,0 +1,26 @@
+import numpy as np
+import pandas   as pd
+import matplotlib.pyplot as pt
+import random
+from sklearn import metrics
+from sklearn.model_selection import train_test_split 
+from sklearn.linear_model import LogisticRegression
+dataset=pd.read_csv('C:/Users/HP/Desktop/donkey/donkeycar/donkeycar/parts/diabetes.csv')
+x=dataset.iloc[:,1:8]
+y=dataset.Diabetes
+print(y)
+xtrain, xtest, ytrain, ytest = train_test_split(x,y, test_size = 0.25, random_state=0)
+regresionLogistica=LogisticRegression()
+regresionLogistica.fit(xtrain, ytrain)
+diabetes=regresionLogistica.predict(xtest)
+datos=np
+for i in range(len(x.columns)):
+    n=int(input(x.columns[i]+' (0-1): '))
+    datos=np.append(datos,n)
+diabetes=regresionLogistica.predict(pd.DataFrame([datos[1:i+2]]))
+print(diabetes)
+if diabetes==0:
+    print('Sin diabetes')
+elif diabetes==1:
+    print('Con diabetes')
+print(dataset.head(10))
